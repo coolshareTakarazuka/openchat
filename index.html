@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>マイページ</title>
+     <script
+      src="https://kit.fontawesome.com/d0a601627a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://yubinbango.github.io/yubinbango/yubinbango.js"
+      charset="UTF-8"
+    ></script>
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <body>
+  <header>
+          
+       <header>
+          <div id="loading">
+        <div class="loading-content">
+            <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+          <h2>スタンプラリーの準備中です！！</h2>
+          <h2>loading・・・</h2>
+          <div class="progress-wrapper">
+            <div class="progress-bar"></div>
+            <div class="progress-text"><span class="percent">0%</span></div>
+          </div>
+        </div>
+    </div>
+      <script>
+        window.addEventListener('load',function(){
+            const element = document.querySelector('#loading')
+            element.classList.add('loadEnd');
+        });
+    </script>
+    <style>
+        #loading{
+            transition: all 1s;
+            background-color: #ffffff;
+            position:fixed;
+            z-index: 999;
+            inset: 0;
+            display: grid;
+            place-items:center;            
+        }
+
+        #loading img{
+            width: 40%;
+            animation: slide 4s linear infinite;
+            position: relative;
+        }
+
+        .loading-content{
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100%{
+                transform: translateX(200%);
+            }
+        }
+
+        #loading h2 {
+            animation:fadeIn 5s linear infinite;
+            position:relative;
+            
+        }
+        
+        @keyframes fadeIn{
+            0% {opacity: 0}
+            50% {opacity : 1}
+            100% {opacity: 0}
+
+        }
+
+
+        .loadEnd{
+          opacity: 0;
+          visibility: hidden;
+          }
+    
+
+
+
+
+    </style>
+
+  
+
+<style>
+  .progress-wrapper {
+  width: 100vw; /* 画面いっぱい */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 20px; /* スマホで左右ギリギリ防止（必要に応じて） */
+  box-sizing: border-box;
+}
+
+.progress-bar {
+  background-color: skyblue;
+  height: 10px;
+  width: 100%; /* wrapperの幅に合わせてフルに伸びる */
+  animation: loadingBar 20s linear infinite;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+  .progress-text {
+    font-size: 24px;
+    color: blue;
+   
+    font-weight: bold;
+  }
+
+  @keyframes loadingBar {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+</style>
+
+<script>
+  const percentSpan = document.querySelector('.percent');
+  let loopStart = Date.now();
+  const duration = 20000; // 10秒
+
+  function loopPercentage() {
+    const now = Date.now();
+    const elapsed = (now - loopStart) % duration;
+    const progress = elapsed / duration;
+    const percentage = Math.floor(progress * 100);
+    percentSpan.textContent = `${percentage}%`;
+    requestAnimationFrame(loopPercentage);
+  }
+
+  loopPercentage();
+</script>
+
+
+        
+  </header>
+  
+    <h1>
+        <img
+          src="https://i.ibb.co/Wv8X3LVh/1.png"
+          alt="IMG-5451"
+          width="100px"
+          height="100px"
+        />
+        クールシェアたからづか<br>2025<br>マイページ
+        
+      </h1>
+<body>
+    <h2 class="openchat">LINE OPENCHAT</h2>
+    <h2>〜スポット・参加者の皆様が自由に<br>情報交換ができるオープンチャット〜</h2>
+
+
+    <div class="line-bc"><!--①LINE会話全体を囲う-->
+
+        <!--②左コメント始-->
+        <div class="balloon6">
+          <div class="faceicon">
+             <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+          </div>
+          <div class="chatting">
+            <div class="says">
+              <p>誰でも自由にコメント可能</p>
+            </div>
+          </div>
+        </div>
+        <!--②/左コメント終-->
+      
+        <!--③右コメント始-->
+        <div class="mycomment">
+          <p>
+          ニックネームで参加可能
+          </p>
+        </div>
+        <!--/③右コメント終-->
+
+         <!--②左コメント始-->
+         <div class="balloon6">
+            <div class="faceicon">
+               <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+            </div>
+            
+            <div class="chatting">
+              <div class="says">
+                <p>各スポットからの情報発信<br>スポットの開設情報・イベント情報</p>
+              </div>
+            </div>
+          </div>
+          <!--②/左コメント終-->
+        
+          <!--③右コメント始-->
+          <div class="mycomment">
+            <p>
+            クールシェアスポットで聞いた<br>ほんわか情報
+            </p>
+          </div>
+          <!--/③右コメント終-->
+          <!--③右コメント始-->
+          <div class="mycomment">
+            <p>
+            行ってみてよかったこと
+            </p>
+          </div>
+          <!--/③右コメント終-->
+
+          <!--②左コメント始-->
+         <div class="balloon6">
+            <div class="faceicon">
+               <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+            </div>
+            
+            <div class="chatting">
+              <div class="says">
+                <p>誹謗中傷をしない</p>
+              </div>
+            </div>
+          </div>
+          <!--②/左コメント終-->
+          <!--②左コメント始-->
+         <div class="balloon6">
+            <div class="faceicon">
+               <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+            </div>
+            
+            <div class="chatting">
+              <div class="says">
+                <p>特定の個人に関する<br>コメントをしない</p>
+              </div>
+            </div>
+          </div>
+          <!--②/左コメント終-->
+          <!--②左コメント始-->
+         <div class="balloon6">
+            <div class="faceicon">
+               <img src="https://i.ibb.co/Wv8X3LVh/1.png">
+            </div>
+            
+            <div class="chatting">
+              <div class="says">
+                <p>みんなが気持ちよく使える<br>オープンチャットを<br>心がけてください！！</p>
+              </div>
+            </div>
+          </div>
+          <!--②/左コメント終-->
+        
+      </div><!--/①LINE会話終了-->
+      <button onclick=”location.href=’https://line.me/ti/g2/uqcKXV8rOCsE8CNXQDX4kKeN1lF8PF1vmwQHlQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default’”><h2>LINEオープンチャットを始める</h2></button>
+      
+</body>
+
+
+<style>
+    h2{
+        text-align: center;
+    }
+    .openchat {
+        background-color: #00B900;
+        text-align: center;
+        color:#fff
+    }
+
+    .line-bc {
+  padding: 20px 10px;
+  max-width: 450px;
+  margin: 15px auto;
+  text-align: right;
+  font-size: 14px;
+  background: #7da4cd;
+
+}
+
+/*以下、②左側のコメント*/
+.balloon6 {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon {
+  float: left;
+  margin-right: -50px;
+  width: 40px;
+}
+
+.balloon6 .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.balloon6 .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 0 0 0 50px;
+  padding: 10px;
+  max-width: 250px;
+  border-radius: 12px;
+  background: #edf1ee;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #edf1ee;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+/*以下、③右側の緑コメント*/
+.mycomment {
+  margin: 10px 0;
+}
+.mycomment p {
+  display: inline-block;
+  position: relative; 
+  margin: 0 10px 0 0;
+  padding: 8px;
+  max-width: 250px;
+  border-radius: 12px;
+  background: #30e852;
+  font-size: 15px:
+}
+
+.mycomment p:after {
+  content: "";
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 8px solid transparent;
+  border-left: 18px solid #30e852;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+button {
+    width: 100%;
+    background-color: #00B900;
+        text-align: center;
+        color:#fff
+}
+</style>
+
+<nav>
+    <ul class="menu">
+      <li>
+        <a href="https://coolsharetakarazuka.github.io/home/" target="_self"
+          ><i class="fa-solid fa-house"></i><br /><span class="iconname"
+            >ホーム</span
+          ></a
+        >
+      </li>
+      <li>
+        <a href="https://coolsharetakarazuka.github.io/map/" target="_self"
+          ><i class="fa-solid fa-location-dot"></i><br /><span class="iconname"
+            >マップ</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="
+        https://coolsharetakarazuka.github.io/how_to_play/" target="_self"
+          ><i class="fa-regular fa-list-ol"></i><br /><span class="iconname"
+            >遊び方</span
+          ></a
+        >
+      </li>
+     
+      <li>
+        <a href="https://liff.line.me/2007302862-3mj9r7W5" target="_self"
+          ><i class="fa-solid fa-circle-user"></i><br /><span class="iconname"
+            >マイページ</span
+          ></a
+        >
+      </li>
+    </ul>
+  </nav>
+ 
+<style>
+      #mypage_content{
+      text-align: center;
+      }
+      .menu {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu li {
+        display: inline-block;
+        text-align: center;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .menu a i {
+        font-size: 24px;
+      }
+
+      .menu a span {
+        display: block;
+        font-size: 12px; /* テキストサイズ */
+        margin-top: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .menu {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .menu li {
+          padding: 5px;
+        }
+      }
+      h1 {
+        font-family: sans-serif;
+        display: flex;
+        align-items: center; /* 縦方向の中央揃え */
+        justify-content: center; /* 横方向の中央揃え */
+        text-align: center;
+        background: skyblue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 85%;
+      }
+
+      </style>
+</html>
